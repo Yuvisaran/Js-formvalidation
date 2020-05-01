@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formvalidation</title>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="welcome.html" onsubmit="return check()" autocomplete="off">
+            <label>First Name <span>*</span></label>
+            <input name='firstName' id="firstName" value="" />
+            <label>Last Name</label>
+            <input name='lastName' id="lastName" value="" />
+            <label>Age <span>*</span></label>
+            <input name='age' id="age" value="" />
+            <label>City</label>
+            <input name='city' id="city" value="" />
+            <input type="submit" value="signup"/>
+        </form>
+    </div>
+    <script>
+        function check(){
+            name = document.getElementById('firstName').value;
+            age = document.getElementById('age').value;
+            if(name == ""){
+                alert("Please fill the name");
+                return false
+            } else if(age == ""){
+                alert ("please fill the age");
+                return false
+            }
+        }
+    </script>
+</body>
+</html>
